@@ -1,0 +1,67 @@
+author="BOBcatsSMAO";
+OnLoadName = "SMAO_CO48RHSA7.Altis";
+OnLoadMission = "teamspeak3:vip1.ts1.cn:6525    QQ group = 423313572";
+loadScreen = "media\images\loading.jpg";
+overviewPicture = "media\images\loading.jpg";
+
+disabledAI = true;
+enableDebugConsole = 1;
+Respawn = 3;
+RespawnDelay = 4;
+RespawnDialog = 0;
+
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 48;
+};
+
+#include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system 
+#include "VAS\menu.hpp"									// Vituele amobox
+#include "taw_vd\dialog.hpp"							// Settings
+#include "ATM_airdrop\dialog.hpp"						// Halo Jump
+#include "joinerUI\defines.hpp"							// Gruppen Manager
+#include "joinerUI\dialog.hpp"							// Gruppen Manager
+
+class CfgFunctions
+{
+           #include "VAS\cfgfunctions.hpp"				// Vituele Amobox
+           #include "taw_vd\CfgFunctions.hpp"			// Settings
+		   #include "JSHK_fncs\cfgFunctions.hpp"		// Feind Spawm Patrollien und co
+};
+
+class RscTitles
+{
+	       #include "dialog\statusBar.hpp"				// Status anzeige FBS
+};
+
+class CfgSounds
+{
+   sounds[] = {Vent,Vent2,Para};
+
+	class Vent {name="Vent";sound[]={ATM_airdrop\data\Vent.ogg,db-11,1.0};titles[] = {};};
+	class Vent2 {name="Vent2";sound[]={ATM_airdrop\data\Vent2.ogg,db-11,1.0};titles[] = {};};
+	class Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
+
+};
+
+class cfgMusic
+{
+	tracks[]={song1};
+	
+	class track1
+	{
+		name="song1";
+		sound[] = {\music\song1.ogg, db+0, 1.0};
+	};
+};
+
+
+
+
+
+
+
+
+
